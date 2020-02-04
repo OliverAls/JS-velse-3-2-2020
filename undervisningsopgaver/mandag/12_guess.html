@@ -29,7 +29,7 @@
             document.querySelector("button").addEventListener("click", buttonClicked);
             document.querySelector("button").removeEventListener("click", randomTal);
             document.querySelector("button").innerHTML = "Tjek svar";
-            //guessOutput.innerHTML = "";
+            guessOutput.innerHTML = "";
             guess.value = "";
 
             function buttonClicked() {
@@ -37,17 +37,17 @@
 
                 if (guess.value < tal) {
                     console.log("For lavt tal");
-                    //guessOutput.innerHTML = "Jeg tænker på et højere tal";
+                    guessOutput.innerHTML = "Jeg tænker på et højere tal";
                 } else if (guess.value == tal) {
                     console.log(`Du har gættet det rigtige tal på ${guessCount} forsøg!`);
-                    //guessOutput.innerHTML = `Du har gættet det rigtige tal på ${guessCount} forsøg!`;
+                    guessOutput.innerHTML = `Du har gættet det rigtige tal på ${guessCount} forsøg!`;
 
                     document.querySelector("button").innerHTML = "spil igen?";
                     document.querySelector("button").addEventListener("click", randomTal);
 
                 } else if (guess.value > tal) {
                     console.log("For højt tal");
-                    //guessOutput.innerHTML = "Jeg tænker på et lavere tal";
+                    guessOutput.innerHTML = "Jeg tænker på et lavere tal";
                 }
             }
         }
