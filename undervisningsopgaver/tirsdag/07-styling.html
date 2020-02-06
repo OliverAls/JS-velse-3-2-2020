@@ -23,27 +23,29 @@
             border-radius: 50%;
             text-align: center;
             background: red;
-        }
-
     </style>
 </head>
 
 <body>
-    <div class="firkant"></div>
-    <div class="cirkel"></div>
-
-
-
-
-
+    <div></div>
+    <div></div>
     <script>
-        let firkantURL = `http://mabe-kea.dk/E19/pics/frog.png`;
-        let cirkelURL = `http://mabe-kea.dk/E19/pics/pig.png`;
+        const frogUrl = "http://mabe-kea.dk/E19/pics/frog.png";
+        const pigUrl = "http://mabe-kea.dk/E19/pics/pig.png";
 
-        document.querySelector(".firkant").innerHTML = `<img src= ${firkantURL} alt="frog">`;
-        document.querySelector(".cirkel").innerHTML = `<img src= ${cirkelURL} alt="pig">`;
+        const green = document.querySelector("");
+        const red = document.querySelector("");
 
+        green.innerHTML = `<img src=${frogUrl}`;
+        red.innerHTML = `<img src=${pigUrl}>`;
+
+
+        green.addEventListener("click", flyt);
+
+        function flyt() {
+            let greenStart = green.innerHTML;
+            green.innerHTML = red.innerHTML;
+            red.innerHTML = greenStart;
+        }
     </script>
-</body>
-
-</html>
+</body></html>
